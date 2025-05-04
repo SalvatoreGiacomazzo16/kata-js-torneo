@@ -133,10 +133,31 @@ const qualifiedFighters = fighters.filter(fighter => fighter.power >= 2000);
 
 
 
-//Milestone 4 
+//Milestone 4 Fights
 
+
+//Added a new fighter to even the array
 if (qualifiedFighters.length % 2 !== 0) {
     qualifiedFighters.push({ name: "Robot", power: 4000, weapon: null });
 }
 
 console.log(qualifiedFighters);
+
+
+for (let i = 0; i < qualifiedFighters.length - 1; i += 2) {
+    const fighter1 = qualifiedFighters[i];
+    const fighter2 = qualifiedFighters[i + 1];
+
+    let winner;
+
+    if (fighter1.power >= fighter2.power) {
+        winner = fighter1;
+    } else {
+        winner = fighter2;
+    }
+
+    console.log(`${fighter1.name} vs ${fighter2.name} Winner: ${winner.name}`);
+}
+
+
+//Milestone 5 Podium
