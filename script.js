@@ -101,7 +101,7 @@ const weapons = [
         power: 250
     }
 ];
-////////
+//////////////////////////////////////////////////////////////////////////////////////////
 
 // Milestone 1 Weapon assignation 
 
@@ -115,3 +115,13 @@ for (let i = 0; i < fighters.length; i++) {
 }
 
 console.log(fighters);
+
+//Milestone 2 Training
+
+for (let i = 0; i < fighters.length; i++) {
+    const trainingMultiplier = Math.floor(Math.random() * 100) + 1;
+    fighters[i].power *= trainingMultiplier;
+    fighters[i].power = Math.round(fighters[i].power);
+
+    console.log(`${fighters[i].name}: power level = ${fighters[i].power}`);
+}
