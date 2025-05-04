@@ -171,7 +171,6 @@ winners.sort(function (a, b) {
 
 const podium = winners.slice(0, 3);
 
-console.log("Top 3 Fighters are...");
 for (let i = 0; i < podium.length; i++) {
     console.log(`#${i + 1} ${podium[i].name}: Power = ${podium[i].power} with ${podium[i].weapon.name}`);
 }
