@@ -130,4 +130,13 @@ for (let i = 0; i < fighters.length; i++) {
 //Milestone 3 Qualification
 
 const qualifiedFighters = fighters.filter(fighter => fighter.power >= 2000);
+
+
+
+//Milestone 4 
+
+if (qualifiedFighters.length % 2 !== 0) {
+    qualifiedFighters.push({ name: "Robot", power: 4000, weapon: null });
+}
+
 console.log(qualifiedFighters);
