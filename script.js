@@ -125,3 +125,9 @@ for (let i = 0; i < fighters.length; i++) {
 
     console.log(`${fighters[i].name}: power level = ${fighters[i].power}`);
 }
+
+
+//Milestone 3 Qualification
+
+const qualifiedFighters = fighters.filter(fighter => fighter.power >= 2000);
+console.log(qualifiedFighters);
