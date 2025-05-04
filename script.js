@@ -144,6 +144,8 @@ if (qualifiedFighters.length % 2 !== 0) {
 console.log(qualifiedFighters);
 
 
+const winners = [];
+
 for (let i = 0; i < qualifiedFighters.length - 1; i += 2) {
     const fighter1 = qualifiedFighters[i];
     const fighter2 = qualifiedFighters[i + 1];
@@ -156,8 +158,20 @@ for (let i = 0; i < qualifiedFighters.length - 1; i += 2) {
         winner = fighter2;
     }
 
+    winners.push(winner);
+
     console.log(`${fighter1.name} vs ${fighter2.name} Winner: ${winner.name}`);
 }
 
 
 //Milestone 5 Podium
+winners.sort(function (a, b) {
+    return b.power - a.power
+});
+
+const podium = winners.slice(0, 3);
+
+console.log("Top 3 Fighters are...");
+for (let i = 0; i < podium.length; i++) {
+    console.log(`#${i + 1} ${podium[i].name}: Power = ${podium[i].power} with ${podium[i].weapon.name}`);
+}
