@@ -103,3 +103,15 @@ const weapons = [
 ];
 ////////
 
+// Milestone 1 Weapon assignation 
+
+for (let i = 0; i < fighters.length; i++) {
+    const randomWeaponIndex = Math.floor(Math.random() * weapons.length);
+
+    fighters[i].weapon = weapons[randomWeaponIndex];
+
+
+    weapons.splice(randomWeaponIndex, 1);
+}
+
+console.log(fighters);
