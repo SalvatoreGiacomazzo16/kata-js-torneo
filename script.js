@@ -1,3 +1,5 @@
+console.time("exec");
+
 // Weapons and Fighters
 
 const fighters = [
@@ -121,7 +123,7 @@ console.log(fighters);
 for (let i = 0; i < fighters.length; i++) {
     const trainingMultiplier = Math.floor(Math.random() * 100) + 1;
     fighters[i].power *= trainingMultiplier;
-    fighters[i].power = Math.round(fighters[i].power);
+
 
     console.log(`${fighters[i].name}: power level = ${fighters[i].power}`);
 }
@@ -171,6 +173,10 @@ winners.sort(function (a, b) {
 
 const podium = winners.slice(0, 3);
 
-for (let i = 0; i < podium.length; i++) {
+/*for (let i = 0; i < podium.length; i++) {
     console.log(`#${i + 1} ${podium[i].name}: Power = ${podium[i].power} with ${podium[i].weapon.name}`);
 }
+    */
+
+console.table(podium);
+console.timeEnd("exec");
